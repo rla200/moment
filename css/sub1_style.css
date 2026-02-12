@@ -1,0 +1,741 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Pretendard;
+    font-size: 15px;
+    line-height: 1.5em;
+    color: #333;
+
+}
+
+#wrap {
+    min-width: 1360px;
+    position: relative;
+    text-transform: uppercase;
+    overflow: hidden;
+
+
+}
+
+img {
+    display: block;
+}
+
+span {
+    display: block;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: "optima-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* header  */
+header {
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    height: 85px;
+}
+
+.innt_header {
+    width: 1320px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top a {
+    width: 60px;
+    height: 60px;
+    background-color: #898674;
+    border-radius: 50%;
+    position: fixed;
+    right: 80px;
+    bottom: 30px;
+    text-align: center;
+    padding: 15px 16px;
+    box-sizing: border-box;
+    z-index: 99;
+
+}
+
+.top a:hover {
+    background-color: #4D4D4D;
+
+}
+
+
+
+.nav {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.nav_btn {
+    cursor: pointer;
+}
+
+
+#arrow {
+    display: flex;
+    gap: 5px;
+}
+
+
+.option {
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: -10px;
+    z-index: 99;
+    box-sizing: border-box;
+    border-top: none;
+}
+
+.option p {
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.option p:hover {
+    background-color: #ddd;
+}
+
+
+/* 버튼 회전 클래스 주기 */
+
+.arrow img {
+    display: block;
+    transform-origin: center;
+    transition: transform 0.5s ease;
+}
+
+.turn img {
+    transform: rotate(180deg);
+}
+
+
+.turn {
+    transform: rotate(180deg);
+    transition: all 0.1s;
+
+}
+
+.util {
+    display: flex;
+    height: 100%;
+    width: 224px;
+    gap: 30px;
+    align-items: center;
+}
+
+.logo {
+    padding: 15px 0;
+
+}
+
+
+/* 기본 네비게이션 바 */
+.navbar {
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    text-transform: uppercase;
+    position: absolute;
+    top: 30px;
+    right: -250px;
+}
+
+
+
+/* 햄버거 버튼: 항상 표시 */
+.hamburger {
+    width: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+
+}
+
+.hamburger span {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ONE */
+
+
+/* 햄버거 활성화 상태 */
+.hamburger.is-active .line:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+    background-color: #fff;
+}
+
+.hamburger.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.is-active .line:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+    background-color: #fff;
+}
+
+
+/* 메뉴 오버레이 스타일 */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    right: -410px;
+    /* 메뉴판 너비만큼 완전히 숨김 */
+    width: 410px;
+    height: 100%;
+    background-color: rgba(124, 122, 109, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease-in-out;
+    z-index: 1000;
+    /* 중요: 자식인 버튼이 이 박스 밖으로 나가도 보이게 설정 */
+    overflow: visible;
+}
+
+/* 활성화 상태 (JS로 추가됨) */
+.nav-overlay.active {
+    right: 0;
+}
+
+.nav-overlay.active .hamburger span {
+    pointer-events: auto;
+    /* 숨겨진 영역 안에서도 버튼은 클릭 가능하게 */
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.nav-menu li {
+    margin: 10px 0 0 0;
+
+}
+
+.nav-menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "optima-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.menu_num a {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+.menu_tlte {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-top: 35px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    font-family: "optima-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.menu_tlte1 {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "optima-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 120px;
+}
+
+
+
+.lnnt_container1 {
+    margin: 0 auto;
+    width: 1320px;
+    text-align: center;
+    height: 1170px;
+}
+
+.buud {
+    height: 250px;
+    background: url(../img/sub1/bouud/hottl_introduction.jpg) center;
+    color: #fff;
+}
+
+
+
+p.typing-txt {
+    /* 타이핑 내용 숨기기 */
+    display: none;
+}
+
+.box1 {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "optima-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal
+}
+
+/* 커서가 깜빡거리는 효과 만들기 */
+@keyframes cursor {
+
+    /* 애니메이션 이름 : cursor */
+    0% {
+        border-right: 1px solid #fff;
+    }
+
+    50% {
+        border-right: 1px solid #000;
+    }
+
+    100% {
+        border-right: 1px solid #fff;
+    }
+}
+
+.typing {
+    display: inline-block;
+    animation: cursor 03s infinite;
+}
+
+
+.innt_text strong {
+    display: block;
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.innt_text p {
+    font-size: 15px;
+}
+
+.innt_img {
+    margin-top: 80px;
+    position: relative;
+}
+
+.innt_img li:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 70px;
+}
+
+.innt_img li:nth-child(2) {
+    position: absolute;
+    top: 130px;
+    right: 130px;
+}
+
+.innt_buttm {
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    margin-top: 630px;
+}
+
+.innt_buttm:hover {
+    background-color: #BDB098;
+    border: none;
+
+
+}
+
+
+.buud1 {
+    height: 250px;
+    background: url(../img/sub1/bouud/logo_introduction.jpg) center;
+    color: #fff;
+}
+
+/* #container2 */
+
+.lnnt_container2 {
+    width: 1320px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lnnnt_container2 {
+    width: 1320px;
+    margin: 0 auto;
+
+}
+
+
+.bl_text {
+    padding-top: 100px;
+}
+
+.bl_text strong {
+    display: block;
+    width: 855px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+    font-size: 25px;
+}
+
+.Brand {
+    display: flex;
+    padding: 30px 0;
+    width: 855px;
+
+}
+
+
+.Brand p {
+    padding-top: 10px;
+    font-weight: 400;
+
+}
+
+.Brand span {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Essence {
+    padding-right: 150px;
+}
+
+
+.logo_text {
+    padding-top: 25px;
+    width: 855px;
+}
+
+.lnnt_logo {
+    width: 855px;
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-between;
+}
+
+.lnnt_logo img {
+    width: 100%;
+
+}
+
+
+.main_logo {
+    padding-right: 150px;
+}
+
+.lnnt_logo p {
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+
+.lnnt_font {
+    display: flex;
+    padding-top: 50px;
+    width: 855px;
+    justify-content: space-between;
+}
+
+
+
+.main_font {
+    padding-right: 210px;
+}
+
+.lnnt_font p {
+    padding: 30px 0 100px 0;
+}
+
+
+
+/* container3 */
+
+
+.buud2 {
+    height: 250px;
+    background: url(../img/sub1/bouud/Directions_ntroduction.jpg) center;
+    color: #fff;
+}
+
+
+.lnnt_container3 {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.lnnt_container3 h3 {
+    font-size: 30px;
+    text-align: center;
+    padding: 100px 0 30px;
+    font-family: "optima-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.lnnt_container3 span {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 60px;
+    line-height: 1.5em;
+}
+
+.Get_direction ul {
+    width: 1320px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.Get_direction strong {
+    display: block;
+    padding: 60px 0;
+    font-size: 20px;
+    font-family: "optima-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+.Get_direction h4 {
+    font-size: 30px;
+    padding: 5px 0px 0 15px;
+    font-family: "optima-lt-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Get_direction p {
+    padding: 35px 0 100px;
+}
+
+.direction {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+#footer {
+    height: 335px;
+    background-color: #5A5843;
+    color: #fff;
+}
+
+.lnnt_footer {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.footer_logo {
+    padding-top: 30px;
+}
+
+.footer_util {
+    display: flex;
+}
+
+.footer_util li a {
+    margin-right: 55px;
+    margin-top: 30px;
+    opacity: 0.6;
+}
+
+.footer_util li a:hover {
+    opacity: 1;
+}
+
+
+.lnnt_p {
+    display: flex;
+    margin-top: 55px;
+    justify-content: space-between;
+    font-size: 15px;
+    position: relative;
+}
+
+.lnnt_p_text span {
+    position: absolute;
+    top: -5px;
+    right: 185px;
+    font-family: "optima-lt-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.sns {
+    display: flex;
+    padding-top: 25px;
+}
+
+.sns span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sns li a {
+    margin-left: 30px;
+    opacity: 0.6;
+}
+
+.sns li a:hover {
+    opacity: 1;
+}
+
+
+.language {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.language li a {
+    margin-left: 20px;
+    opacity: 0.6;
+}
+
+.language li a:hover {
+    opacity: 1;
+}
+
+
+
+.ltd {
+    font-size: 12px;
+    padding-top: 25px;
+}

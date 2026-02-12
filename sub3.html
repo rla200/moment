@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1360">
+    <title>MOMENTON</title>
+    <!-- font-family : Pretendard -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <!-- font-family: "optima-lt-pro", sans-serif;
+font-weight: 700;
+font-style: normal; -->
+    <link rel="stylesheet" href="https://use.typekit.net/iii2kjh.css">
+
+    <!-- Swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="img/logo/favicon.png" type="image/x-icon">
+    <!-- aos.css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/sub3_style.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="innt_header">
+                <div class="nav">
+                    <div class="nav_btn">
+                        <div id="arrow">
+                            <p class="lang">KO</p>
+                            <span>
+                                <img src="img/main/Arrow.png" alt="">
+                            </span>
+                            <div class="option">
+                                <p onclick="option1()">EN</p>
+                                <p onclick="option2()">CN</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p><a href="#">
+                            MEMBERSHIP LOGIN
+                        </a></p>
+                </div>
+                <h1 class="logo">
+                    <a href="./index.html"><img src="img/logo/logo.png" alt="로고"></a>
+                </h1>
+
+                <ul class="util">
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">예약조회</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+
+
+
+            <nav class="navbar">
+                <div class="three col">
+                    <div class="hamburger" id="hamburger-1">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                <div class="nav-overlay" id="nav-overlay">
+                    <ul class="nav-menu">
+                        <li class="menu_tlte1">momenton</li>
+                        <li class="menu_num"><a href="./index.html#container1" target="_blank">스페셜 오퍼</a></li>
+                        <li class="menu_num"><a href="./index.html#container2" target="_blank">룸 & 스위트</a></li>
+                        <li class="menu_num"><a href="./index.html#container3" target="_blank">스페셜 이벤트</a></li>
+                        <li class="menu_num"><a href="./index.html#container4" target="_blank">다이닝</a></li>
+                        <li class="menu_num"><a href="./index.html#container5" target="_blank">VIP 스페셜 멤버십</a></li>
+
+                        <li class="menu_tlte">about</li>
+                        <li class="menu_num"><a href="./sub1.html#container1" target="_blank">브랜드 소개</a></li>
+                        <li class="menu_num"><a href="./sub1.html#container2" target="_blank">로고 소개</a></li>
+
+                        <li class="menu_num"><a href="./sub1.html#container3" target="_blank">찾아오시는 길</a></li>
+
+                        <li class="menu_tlte">facility&dining</li>
+                        <li class="menu_num"><a href="./sub2.html#container1" target="_blank">restaurant</a></li>
+                        <li class="menu_num"><a href="./sub2.html#container2" target="_blank">lounge bar</a></li>
+                        <li class="menu_num"><a href="./sub2.html#container3" target="_blank">spa</a></li>
+
+                        <li class="menu_tlte">OFFERS&ROOMS</li>
+                        <li class="menu_num"><a href="#container3">ROOMS</a></li>
+                        <li class="menu_num"><a href="#container2">event</a></li>
+                        <li class="menu_num"><a href="#container3">패키지</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="top">
+                <a href="./sub3.html"><img src="./img/argg.png" alt=""></a>
+            </div>
+
+        </header>
+
+        <!-- container1 -->
+
+        <div id="container1">
+            <div class="buud" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1000">
+                <h2>room</h2>
+            </div>
+            <div class="lnnt_container1">
+                <!-- 룸 메인 탭 버튼 -->
+                <ul id="box1">
+                    <li class="tab tablink opacity" onclick="openRoom(event,'Board01')">스위트 패밀리 트윈 룸</li>
+                    <li class="tab tablink" onclick="openRoom(event,'Board02')">프리미엄 룸</li>
+                </ul>
+
+                <!-- Board01: 스위트 패밀리 트윈 룸 -->
+                <div id="Board01" class="room_board active">
+                    <h4>Introduction</h4>
+                    <p class="intro_p">침실과 다용도에 적합한 테이블로 과도하지않고 여유러운 분위기와 객실내의
+                        <br>Service가 휴식을 좀 더 풍성하게 해줍니다
+                    </p>
+
+                    <div class="photo_view_area">
+                        <!-- 메인 이미지 (상단) -->
+                        <div class="main_photo_container">
+                            <div id="Photo01" class="photo_board">
+                                <img src="./img/sub3/room/room1_1.jpg">
+                            </div>
+                            <div id="Photo02" class="photo_board active">
+                                <img src="./img/sub3/room/room1_2.jpg">
+                            </div>
+                            <div id="Photo03" class="photo_board">
+                                <img src="./img/sub3/room/room1_3.jpg">
+                            </div>
+                        </div>
+
+                        <!-- 썸네일 리스트 (하단 배치) -->
+                        <ul id="box2">
+                            <li class="tablink1" onclick="openPhoto(event,'Photo01')">
+                                <img src="./img/sub3/room/room1_m1.jpg">
+                            </li>
+                            <li class="tablink1 opacity1" onclick="openPhoto(event,'Photo02')">
+                                <img src="./img/sub3/room/room1_m2.jpg">
+                            </li>
+                            <li class="tablink1" onclick="openPhoto(event,'Photo03')">
+                                <img src="./img/sub3/room/room1_m3.jpg">
+                            </li>
+                        </ul>
+                        <p class="buttm_box1">Service</p>
+                    </div>
+
+
+                    <div class="Service">
+                        <div class="Service_text1">
+                            <p>-냉장고 / 전기포트</p>
+                            <p>-객실 내 개인금고</p>
+                            <p>-모닝콜 서비스</p>
+                        </div>
+                        <div class="Service_text1">
+                            <p>-노트북 대여가능</p>
+                            <p>-개별 테이블</p>
+                            <p>-초고속 인터넷</p>
+                        </div>
+                        <div class="Service_text2 ebm">
+                            <p>-옷장</p>
+                            <p>-반짇고리</p>
+                            <p>-헤어 드라이어</p>
+                        </div>
+                        <div class="Service_text2">
+                            <p>-개별 냉난방(시스템에어컨)</p>
+                            <p>-삼푸 / 샤워 젤 </p>
+                            <p>-면봉 / 샤워 캡 </p>
+                        </div>
+
+                    </div>
+                    <div class="Service1">
+                        <div class="Service1_text">
+                            <strong>예약시 주의사항</strong>
+                            <p>-상기 요금에 10%의 세금이 포함되어 있습니다</p>
+                            <p>-15명 이상의 단체요금은 별도로 문의하여 주십시오</p>
+                            <p>-상기요금은 사전통고없이 변경 될 수 있습니다</p>
+                        </div>
+                        <div class="Service1_text1">
+                            <p>예약 및 문의</p>
+                            <p>000-0000</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Board02: 프리미엄 룸 -->
+                <div id="Board02" class="room_board">
+                    <h4>Premium Experience</h4>
+                    <p class="intro_p">녹음이 우거진 배경을 파노라믹 뷰로 감상하며 고객의 감성에
+                        <br>모던함과 녹음을 경혐하는 Service가 휴식을 좀 더 풍성하게 해줍니다
+                    </p>
+
+                    <div class="photo_view_area">
+                        <!-- 메인 이미지 (상단) -->
+                        <div class="main_photo_container">
+                            <div id="Photo21" class="photo1_board">
+                                <img src="./img/sub3/room/room2_1.jpg">
+                            </div>
+                            <div id="Photo22" class="photo1_board active">
+                                <img src="./img/sub3/room/room2_2.jpg">
+                            </div>
+                            <div id="Photo23" class="photo1_board">
+                                <img src="./img/sub3/room/room2_3.jpg">
+                            </div>
+                        </div>
+
+                        <!-- 썸네일 리스트 (하단 배치) -->
+                        <ul id="box3">
+                            <li class="tablink2" onclick="openPhoto1(event,'Photo21')">
+                                <img src="./img/sub3/room/room2_m1.jpg">
+                            </li>
+                            <li class="tablink2 opacity2" onclick="openPhoto1(event,'Photo22')">
+                                <img src="./img/sub3/room/room2_m2.jpg">
+                            </li>
+                            <li class="tablink2" onclick="openPhoto1(event,'Photo23')">
+                                <img src="./img/sub3/room/room2_m3.jpg">
+                            </li>
+                        </ul>
+
+                        <p class="buttm_box1">Service</p>
+                    </div>
+
+
+                    <div class="Service">
+                        <div class="Service_text1">
+                            <p>-냉장고 / 전기포트</p>
+                            <p>-객실 내 개인금고</p>
+                            <p>-모닝콜 서비스</p>
+                        </div>
+                        <div class="Service_text1">
+                            <p>-노트북 대여가능</p>
+                            <p>-개별 냉난방(시스템에어컨)</p>
+                            <p>-초고속 인터넷</p>
+                        </div>
+                        <div class="Service_text2 ebm">
+                            <p>-옷장</p>
+                            <p>-조깅 라운지</p>
+                            <p>-캠프파이어</p>
+                        </div>
+                        <div class="Service_text2">
+                            <p>-실내 무드등 배치</p>
+                            <p>-바베큐 </p>
+                            <p>-야외 테이블 </p>
+                        </div>
+
+                    </div>
+                    <div class="Service1">
+                        <div class="Service1_text">
+                            <strong>예약시 주의사항</strong>
+                            <p>-상기 요금에 10%의 세금이 포함되어 있습니다</p>
+                            <p>-15명 이상의 단체요금은 별도로 문의하여 주십시오</p>
+                            <p>-상기요금은 사전통고없이 변경 될 수 있습니다</p>
+                        </div>
+                        <div class="Service1_text1_2">
+                            <p>예약 및 문의</p>
+                            <p>000-0000</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="container2">
+            <div class="buud1" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+                <h2>event</h2>
+            </div>
+            <div class="lnnt_container2">
+                <div class="lnnt_container_text">
+                    <strong  data-aos="fade-right">기대를 넘어선 하나의 시즌, 오직 당신을 위해 설계된 특별한
+                        선물.
+                        <br>상상 그 이상의 감각적인 휴식.지금 이 계절에만 머무는 가장 완벽한 혜택.
+                    </strong>
+
+                    <ul class="event">
+                        <li data-aos="fade-right" data-aos-duration="700">
+                            <p class="edd">[Early Bird] 계절의 선물 프로모션</p>
+                            <div class="event_img">
+                                <img src="./img/sub3/event/event_1.jpg" alt="">
+                            </div>
+                            <p>30일 전 예약 시 객실 25% 할인 + 레이트 체크아웃(14:00) 혜택</p>
+                            <a class="buttm">자세히보기</a>
+                        </li>
+                        <li data-aos="fade-up" data-aos-duration="700">
+                            <p class="edd">[Stay & Dine] 미식의 초대 패키지</p>
+                            <div class="event_img">
+                                <img src="./img/sub3/event/event_2.jpg" alt="">
+                            </div>
+                            <p>프리미엄 객실 1박 + 호텔 시그니처 디너 코스 2인 + 와인 1병 제공</p>
+                            <a class="buttm">자세히보기</a>
+                        </li>
+                        <li data-aos="fade-left" data-aos-duration="700">
+                            <p class="edd">[Workation] 새로운 영감의 공간</p>
+                            <div class="event_img">
+                                <img src="./img/sub3/event/event_3.jpg" alt="">
+                            </div>
+                            <p>주중 연박 할인 + 커피 쿠폰 제공 + 와인 1병 제공</p>
+                            <a class="buttm">자세히보기</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="container3">
+                <div class="buud2" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+                    <h2>Package</h2>
+                </div>
+                <div class="lnnt_container3">
+                    <div class="lnnt_container_text">
+                        <strong  data-aos="fade-right">일상의 소음이 멈추는 곳, 당신만을 위해 준비된
+                            완벽한 여백을 경험하세요.
+                            <br>세심한 배려가 깃든 맞춤형 패키지로 당신의 기념일을 더욱 빛나게 장식해 보세요.
+                        </strong>
+                        <ul class="package">
+                            <li data-aos="fade-down" data-aos-duration="1500">
+                                <p class="package_titie">[Early Bird Special] 패키지</p>
+                                <div class="event_img">
+                                    <img src="./img/sub3/package/package1.jpg" alt="">
+                                </div>
+                                <p class="stro">미리 준비하는 여행자의 즐거운 특권.
+                                    <br>고품격 서비스를 합리적으로 선점하는 기회를 놓치지 마세요.
+                                </p>
+                                <p>20일 전 예약 시 객실가 할인 +
+                                    <br>SPA 무료 이용 + 관내 F&B 10% 할인권
+                                </p>
+                                <a class="buttm padd">자세히보기</a>
+                            </li>
+                            <li data-aos="fade-left" data-aos-offset="200" data-aos-duration="1500">
+
+                                <p class="package_titie">[Pet-Friendly Stay] 패키지</p>
+                                <div class="event_img">
+                                    <img src="./img/sub3/package/package2.jpg" alt="">
+                                </div>
+                                <p class="stro">소중한 반려견과 함께 여행하세요.
+                                    <br>세심하게 준비된 펫 전용 서비스로 행복한 추억을 쌓을 수 있습니다.
+                                </p>
+                                <p>펫 전용 객실 + 전용 침대 & 식기 대여 +
+                                    <br>펫 간식 & 장난감 기프트 박스
+                                </p>
+                                <a class="buttm padd">자세히보기</a>
+                            </li>
+                            <li data-aos="fade-right" data-aos-offset="250" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                <p class="package_titie"> [Deep Sleep & Wellness] 패키지</p>
+                                <div class="event_img">
+                                    <img src="./img/sub3/package/package3.jpg" alt="">
+                                </div>
+                                <p class="stro">지친 몸과 마음을 다스리는 온전한 휴식.
+                                    <br>따뜻한 입욕과 향기로운 차 한 잔이 당신의 깊은 숙면을 도와드립니다.
+                                </p>
+                                <p>객실 1박 + 아로마 세트 +
+                                    <br>수면 안대 & 티 파우치 + SPA 무료 이용
+                                </p>
+                                <a class="buttm padd">자세히보기</a>
+                            </li>
+                            <li data-aos="fade-up" data-aos-offset="300" data-aos-duration="1500">
+                                <p class="package_titie">[Happy Family Outing] 패키지</p>
+                                <div class="event_img">
+                                    <img src="./img/sub3/package/package4.jpg" alt="">
+                                </div>
+                                <p class="stro">아이들에게는 꿈같은 즐거움을, 부모님께는 편안한 여유를 드립니다.
+                                    <br>온 가족이 웃음꽃 피우는 행복한 여행을 계획해 보세요.
+                                </p>
+                                <p>스위트 패밀리 트윈 객실 + 키즈 어메니티 세트 +
+                                    <br>캐릭터 인형 또는 키즈 간식 박스
+                                </p>
+                                <a class="buttm padd">자세히보기</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div id="footer">
+                <div class="lnnt_footer">
+                    <h1 class="footer_logo">
+                        <a href="#"><img src="./img/logo/foot_logo.svg" alt=""></a>
+                    </h1>
+
+                    <ul class="footer_util">
+                        <li><a href="#">고객 문의</a></li>
+                        <li><a href="#">연락처</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">이메일무단수집금지</a></li>
+                        <li><a href="#">윤리경영(부정제보)</a></li>
+                        <li><a href="#">건축·시설물 안전관리</a></li>
+                        <li><a href="#">고정형 영상정보처리기기 운영·관리방침</a></li>
+                    </ul>
+
+                    <div class="lnnt_p">
+                        <div class="lnnt_p_text">
+                            <p>서울특별시 종로구 율곡로 88 삼환빌딩 8층 (주)할리스에프엔비 / 대표전화 : 02-2188-7100
+                                <br>대표자 : 김유진 / 사업자등록번호 : 211-87-61044 / 통신판매업 : 제2012-서울강남-01081호
+                            </p>
+                            <span>SNS</span>
+                            <p class="ltd">
+                                COPYRIGHT ⓒ HOLLYS COFFEE CO., LTD. All Rights Reserved.
+                            </p>
+                        </div>
+                        <ul class="sns">
+                            <li><a href="https://www.instagram.com" target="_blank">
+                                    <img src="./img/main/foot/icon_instar.png" alt="">
+                                </a></li>
+                            <li><a href="https://www.twitter.com" target="_blank">
+                                    <img src="./img/main/foot/icon_twitter.png" alt="">
+                                </a></li>
+                            <li><a href="https://www.youtube.com" target="_blank">
+                                    <img src="./img/main/foot/icon_youtube.png" alt="">
+                                </a></li>
+                            <li><a href="https://www.facebook.com" target="_blank">
+                                    <img src="./img/main/foot/icon_facebook.png" alt="">
+                                </a></li>
+                        </ul>
+                    </div>
+
+                    <ul class="language">
+
+                        <li><a href="#">ENGLISH</a></li>
+                        <li><a href="#">日本語</a></li>
+                        <li><a href="#">简体中文</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    </div>
+    </div>
+    <!-- Swiper CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- tab js -->
+    <script src="js/isotope.min.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
+    <script src="js/core.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
