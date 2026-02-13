@@ -114,7 +114,7 @@ h2{
 
 /* header  */
 header {
-    width: 1320px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     height: 85px;
@@ -123,9 +123,11 @@ header {
 .innt_header{
     width: 1320px;
     height: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
+
 .top a {
     width: 60px;
     height: 60px;
@@ -227,7 +229,7 @@ header {
     text-transform: uppercase;
     position: absolute;
     top: 30px;
-    right: -250px;
+    right: 200px;
 }
 
 
