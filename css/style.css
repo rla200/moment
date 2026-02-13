@@ -87,7 +87,7 @@ body {
 }
 
 #wrap {
-    min-width: 1820px;
+    min-width: 1800px;
     position: relative;
     text-transform: uppercase;
     overflow: hidden;
@@ -225,7 +225,7 @@ header {
     text-transform: uppercase;
     position: absolute;
     top: 30px;
-    right: -250px;
+    right: -150px;
 }
 
 
