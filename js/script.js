@@ -159,8 +159,13 @@ function openPhoto1(evt, photoName) {
 }
 
 // 언어 변경 함수
-function option1() { $(".lang").text("EN"); }
+function option1() { $(".lang").text("EN");
+        window.location.href = "index(en).html";
+ }
 function option2() { $(".lang").text("CN"); }
+function option3() { $(".lang").text("KO");
+    window.location.href = "index.html";
+ }
 
 // 초기 로드 시 탭 활성화
 window.addEventListener("DOMContentLoaded", function () {
