@@ -151,6 +151,7 @@ header {
 
 .nav_btn {
     cursor: pointer;
+    position: relative;
 }
 
 
@@ -163,7 +164,7 @@ header {
 .option {
     background-color: #fff;
     position: absolute;
-    top: 60px;
+ top: 30px; /* 버튼 바로 아래 위치 */
     left: -10px;
     z-index: 99;
     box-sizing: border-box;
